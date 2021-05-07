@@ -1,0 +1,194 @@
+<html>
+<head>
+<title>Login</title>
+<script>
+function validate()
+{
+var user=document.f1.user.value;
+var pswd=document.f1.pswd.value;
+if(user==null||user=="")
+{
+alert("Enter the username");
+}
+if(pswd==null||pswd=="")
+{
+alert("Enter the password");
+}
+if(user.length<5)
+{
+alert("username should be of 5 characters")
+}
+}
+</script>
+</head>
+<style>
+body {
+	background-image:
+		url("http://mkuniversity.ac.in/new/ptc/images/slider/ptc%20cell.jpg");
+	background-repeat: no-repeat;
+	background-size: 180%;
+}
+
+form {
+	max-width: 200px;
+	margin: 100px;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.3);
+	padding: 100px 100px;
+	text-align: center;
+	margin-left: auto;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	margin: 8px 0;
+	padding: 20px 20px;
+	display: inline-block;
+	border: 2px solid black;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: black;
+	width: 100%;
+	color: white;
+	padding: 15px;
+	margin: 10px 0px;
+	border: none;
+	cursor: pointer;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	height: 60px;
+	background: #EC7063;
+	padding: 0 50px;
+}
+
+.logo {
+	width: 30%;
+	float: left;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 60px;
+	font-size: 35px;
+}
+
+nav {
+	width: 68%;
+	float: right;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin: 0 10px;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+.banner {
+	height: 100%;
+}
+
+.banner img {
+	width: 100%;
+	height: 90vh;
+}
+
+.content {
+	padding: 5%;
+}
+
+.content p {
+	font-size: 18px;
+	line-height: 1.7;
+	font-family: sans-serif;
+	margin-bottom: 25px;
+}
+
+footer {
+	background: #000;
+	color: #fff;
+	padding: 15px 50px;
+	text-align: center;
+}
+
+@media ( max-width : 600px) {
+	header {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		text-align: center;
+	}
+	.logo {
+		width: 100%;
+		float: none;
+	}
+	nav {
+		width: 100%;
+		float: none;
+	}
+	nav ul li {
+		display: block;
+	}
+	nav ul {
+		float: none;
+	}
+}
+</style>
+<body>
+<header>
+		<div class="logo">Arts & Science</div>
+		<nav>
+			<ul>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="register_project.html">Register</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+	<form method="post" name="f1" onsubmit="validate()"
+		action="login_project">
+		<table align="center">
+			<tr>
+				<td>UserName</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="Enter UserName" name="user"><br>
+				</td>
+			</tr>
+			<tr>
+				<td>Password</td>
+			</tr>
+			<tr>
+				<td><input type="password" placeholder="Enter Password"
+					name="pswd"><br> <input type="checkbox" name="a">
+					<label for="a">Remember me</label></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Login</button>
+					<br> <a href="forgetpsd.html"> Forgot password? </a>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

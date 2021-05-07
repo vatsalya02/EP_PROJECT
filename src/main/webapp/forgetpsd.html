@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script>
+function validate()
+{
+var user=document.f1.user.value;
+var pswd=document.f1.pswd.value;
+var cp=document.f1.cpd.value;
+if(user==null||user=="")
+{
+alert("Enter the username");
+}
+if(pswd==null||pswd=="")
+{
+alert("Enter the password");
+}
+if(pswd.length<8)
+{
+alert("password should be of 8 characters")
+}
+if(user.length<8)
+{
+alert("username should be of 8 characters")
+}
+if(cpd==null||cpd=="")
+{
+alert("Enter conform password");
+}
+
+if(pswd!=cpd)
+{
+alert("Password should be same");
+}
+}
+</script>
+<style>
+body{
+       background-image:url("https://companies.naukri.com/rms-careers/wp-content/uploads/sites/21747/2017/11/Recruitment-key-on-keyboard-.jpg");
+      background-repeat:no-repeat;
+      background-size:100%;
+           }
+ form {  
+   width: 15%;  
+   margin: 150px;  
+   background: #b3cccc;  
+   padding: 60px 100px;  
+   text-align: center;  
+   margin-right:auto;
+}
+input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid black; 
+        box-sizing: border-box; 
+    }
+button { 
+       background-color:black; 
+       width: 100%;
+        color: white; 
+        padding: 15px; 
+        margin: 10px 0px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+</style>
+<body>
+<form method="post" name="f1" onsubmit="validate()" action="Fpassword">
+<table align="center">
+<tr><td>UserName</td></tr>
+          <tr><td>
+          <input type="text" placeholder="Enter UserName" name="user"><br>
+          </td>
+           </tr>
+<tr><td>New Password</td></tr>
+       <tr><td>
+        <input type="password" placeholder="Enter New Password" name="pswd"><br>
+       </td>
+</tr>
+<tr><td>Conform New Password</td></tr>
+       <tr><td>
+        <input type="password" placeholder="Enter New Password" name="cpd"><br>
+       </td>
+       <tr>
+				<td>Back To Login<a href="login_project.html">Login</a></td>
+			</tr>
+</tr>
+<tr><td><button type="submit">Submit</button><br></td></tr>
+</table>
+</form>
+</body>
+</html>

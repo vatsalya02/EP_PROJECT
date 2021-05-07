@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Delete PG</title>
+<script>
+function validate()
+{
+var user=document.f1.user.value;
+if(user==null||user=="")
+{
+alert("Enter the regno");
+}
+}
+</script>
+<style>
+body{
+       background-image:url("https://gennet.com/wp-content/uploads/2016/09/home-page-CTA-background-General-Networks-update.jpg");
+      background-repeat:no-repeat;
+      background-size:150%;
+           }
+ form {  
+   max-width: 200px;  
+   margin: 200px;  
+   background: white;
+   padding: 60px 100px;
+   text-align: center;  
+   margin-left:auto;
+   margin-right:auto;
+}
+input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid black; 
+        box-sizing: border-box; 
+    }
+button { 
+       background-color:black; 
+       width: 100%;
+        color: white; 
+        padding: 15px; 
+        margin: 10px 0px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+header {
+	height: 60px;
+	background: #262626;
+	padding: 0 50px;
+}
+
+.logo {
+	width: 30%;
+	float: left;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 60px;
+	font-size: 35px;
+	font-family: sans-serif;
+}
+
+nav {
+	width: 68%;
+	float: right;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin: 0 10px;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+		<div class="logo">Arts & Science</div>
+		<nav>
+			<ul>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="logout">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+<form method="post" name="f1" onsubmit="validate()" action="pgdelete">
+<h2><u>Delete PG</u></h2>
+<table align="center">
+<tr><td>RegNo:</td></tr>
+          <tr><td>
+          <input type="text" placeholder="Enter Regno" name="user"><br>
+          </td>
+           </tr>
+<tr><td><button type="submit">Delete</button><br>
+</table>
+</form>
+</body>
+</html>

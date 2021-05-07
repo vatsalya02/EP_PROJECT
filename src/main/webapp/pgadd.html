@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PG</title>
+<script>
+function ug()
+{
+var regno=document.f3.regno.value;
+var name=document.f3.name.value;
+var email=document.f3.email.value;
+var dep=document.f3.dep.value;
+var year=document.f3.year.value;
+var add=document.f3.add.value;
+var tboard=document.f3.tboard.value;
+var tper=document.f3.tper.value;
+var tyear=document.f3.tyear.value;
+var iboard=document.f3.iboard.value;
+var iper=document.f3.iper.value;
+var iyear=document.f3.iyear.value;
+var phno=document.f3.phno.value;
+var back=document.f3.back.value;
+var gender=document.f3.gender.value;
+var per=document.f3.per.value;
+var pass=document.f3.pass.value
+var at = parseInt(email.indexOf('@'));
+var dot = parseInt(email.lastIndexOf('.'));
+if(at==-1 || dot==-1)
+alert("Enter valid email");
+else if(dot > at && email[dot+2]!=null)
+alert("Welcome");
+else
+alert("invalid email");
+if(regno==null||regno=="")
+{
+alert("Enter the registration number");
+}
+if(name==null||name=="")
+{
+alert("Enter the name");
+}
+if(dep==null||dep=="")
+{
+alert("Enter the department");
+}
+if(year==null||year=="")
+{
+alert("Enter the year");
+}
+if(tboard==null||tboard==""){
+	alert("Enter Your Tenth Board")
+}
+if(tper==null||tper==""){
+	alert("Enter Your Tenth Percentage")
+}
+if(tyear==null||tyear==""){
+	alert("Enter Your Tenth Pass out year")
+}
+if(iboard==null||iboard==""){
+	alert("Enter Your Intermidiate Board")
+}
+if(iper==null||iper==""){
+	alert("Enter Your Intermidiate Percentage")
+}
+if(iyear==null||iyear==""){
+	alert("Enter Your Intermidiate Pass out year")
+}
+if(add==null||add=="")
+{
+alert("Fill the address field")
+}
+if(phno==null||phno=="")
+{
+alert("Enter your phone number")
+}
+if(per==null||per=="")
+{
+alert("Enter your percentage")
+}
+if(back==null||back=="")
+{
+alert("Enter your backlogs")
+}
+if(pass==null||pass=="")
+{
+alert("Enter the year of passing")
+}
+ErrorText= "";
+if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) )
+{
+alert ( "Please choose your Gender: Male or Female" );
+return false;
+}
+if (ErrorText= "") { form.submit() }
+}
+</script>
+</head>
+<style>
+@import
+	url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+body {
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+form {
+	width: 50%;
+	margin: 30px auto;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.3);
+	padding: 10px 10px 10px 10px;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=number]
+	{
+	width: 80%;
+	margin: 5px 0;
+	padding: 10px 20px;
+	display: inline-block;
+	border: 2px solid black;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: black;
+	width: 100%;
+	color: white;
+	padding: 15px;
+	margin: 10px 0px;
+	border: none;
+	cursor: pointer;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+.grid {
+	display: grid;
+	width: 114em;
+	margin-left: auto;
+	margin-right: auto;
+	grid-gap: 6rem;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	align-items: start;
+}
+
+.grid-item {
+	background-repeat: no-repeat;
+	background-size: 130%;
+	background-image:
+		url('https://ak.picdn.net/shutterstock/videos/12549533/thumb/1.jpg');
+	overflow: hidden;
+	box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.grid-item:hover {
+	transform: translateY(-0.5%);
+	box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+	display: block;
+	width: 100%;
+	height: 20rem;
+	object-fit: cover;
+}
+
+.card-content {
+	padding: 3rem;
+}
+
+.card-header {
+	font-size: 3rem;
+	font-weight: 500;
+	color: #0d0d0d;
+	margin-bottom: 1.5rem;
+}
+
+.card-text {
+	font-size: 1.6rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.7;
+	color: #3d3d3d;
+	margin-bottom: 2.5rem;
+}
+
+.card-btn {
+	display: block;
+	width: 100%;
+	padding: 1.5rem;
+	font-size: 2rem;
+	text-align: center;
+	color: #3363ff;
+	background-color: #d8e0fd;
+	border: none;
+	border-radius: 0.4rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+}
+
+.card-btn span {
+	margin-left: 1rem;
+	transition: 0.2s;
+}
+
+.card-btn:hover, .card-btn:active {
+	background-color: #c2cffc;
+}
+
+.card-btn:hover span, .card-btn:active span {
+	margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 60em) {
+	body {
+		padding: 3rem;
+	}
+	.grid {
+		grid-gap: 3rem;
+	}
+}
+
+header {
+	height: 60px;
+	background: #262626;
+	padding: 0 50px;
+}
+
+.logo {
+	width: 30%;
+	float: left;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 60px;
+	font-size: 35px;
+	font-family: sans-serif;
+}
+
+nav {
+	width: 68%;
+	float: right;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin: 0 10px;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+
+.banner {
+	height: 100%;
+}
+
+.banner img {
+	width: 100%;
+	height: 90vh;
+}
+
+.content {
+	padding: 5%;
+}
+
+.content p {
+	font-size: 18px;
+	line-height: 1.7;
+	font-family: sans-serif;
+	margin-bottom: 25px;
+}
+
+footer {
+	background: #000;
+	color: #fff;
+	padding: 15px 50px;
+	text-align: center;
+}
+
+@media ( max-width : 600px) {
+	header {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		text-align: center;
+	}
+	.logo {
+		width: 100%;
+		float: none;
+	}
+	nav {
+		width: 100%;
+		float: none;
+	}
+	nav ul li {
+		display: block;
+	}
+	nav ul {
+		float: none;
+	}
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="logo">Arts & Science</div>
+		<nav>
+			<ul>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="logout">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="grid">
+		<div class="grid-item">
+			<div class="card">
+				<form method="post" name="f3" onsubmit="ug()" action="pgadd">
+					<h2 style="color: white">
+						<u>PG REGISTRATION FORM</u>
+					</h2>
+					<table background: rgb(0, 0, 0); background:rgba(0, 0, 0, 0.3)">
+						<tr>
+							<td style="color: white">REG NO:</td>
+							<td><input type="text" name="regno"
+								placeholder="Enter Regno"></td>
+						<tr>
+							<td style="color: white">NAME:</td>
+							<td><input type="text" name="name" placeholder="Enter Name"></td>
+						</tr>
+						<tr>
+							<td style="color: white">EMAIL ID:</td>
+							<td><input type="email" name="email"
+								placeholder="Enter Email Id"></td>
+						</tr>
+						<td style="color: white">GENDER:</td>
+						<td style="color: white"><input type="radio" name="gender"
+							value="male">Male <input type="radio" name="gender"
+							value="Female">Female</td>
+						</tr>
+						<tr>
+							<td style="color: white">DEPARTMENT:</td>
+							<td><input type="text" name="dep"
+								placeholder="Enter Department"></td>
+						</tr>
+						<tr>
+							<td style="color: white">YEAR:</td>
+							<td><input type="text" name="year" placeholder="Enter Year"></td>
+						</tr>
+						<tr>
+							<td style="color: white">ADDRESS:</td>
+							<td><textarea cols="53" rows="4" placeholder="Enter Address"
+									name="add"></textarea></td>
+						</tr>
+						<td style="color: white">PH NO:</td>
+						<td><input type="number" name="phno"
+							placeholder="Enter Ph No"></td>
+						</tr>
+						<tr>
+							<td style="color: white">QUALIFICATION:</td>
+							<td>
+								<table border="2">
+									<tr>
+										<th style="color: white">SL.NO</th>
+										<th style="color: white">Examination</th>
+										<th style="color: white">Board</th>
+										<th style="color: white">Percentage</th>
+										<th style="color: white">Year of Passing</th>
+									</tr>
+									<tr>
+										<td style="color: white">1</td>
+										<td style="color: white">Class X</td>
+										<td><input type="text" name="tboard"></td>
+										<td><input type="text" name="tper"></td>
+										<td><input type="text" name="tyear"></td>
+									</tr>
+									<tr>
+										<td style="color: white">2</td>
+										<td style="color: white">ClassXII</td>
+										<td><input type="text" name="iboard"></td>
+										<td><input type="text" name="iper"></td>
+										<td><input type="text" name="iyear"></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td style="color: white">PERCENTAGE IN B.TECH:</td>
+							<td><input type="text" name="per"
+								placeholder="Enter percentage"></td>
+						</tr>
+						<tr>
+							<td style="color: white">YEAR OF PASSING:</td>
+							<td><input type="text" name="pass" placeholder="Enter year"></td>
+						</tr>
+					</table>
+					</td>
+					</tr>
+					</table>
+					<br>
+					<div>
+						<input type="submit" value="submit" style='position:relative;left:250px;'>
+					</div>
+				</form>
+</body>
+</html>
